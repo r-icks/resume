@@ -1,0 +1,276 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[10pt]{article}
+\usepackage{times} % Times New Roman font package
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT --------------------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75 in}
+\addtolength{\evensidemargin}{0.5 in}
+\addtolength{\textwidth}{1.5 in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.5 in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-9 pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{- 9 pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+
+\newcommand{\resumeSubheading}[4]{
+\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-10 pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7 pt}
+}
+
+\newcommand{\resumeCertHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & \small #2 \\
+    \end{tabular*}\vspace{-8pt} 
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-7 pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.10 in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4 pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  \vspace{-5 pt}
+  \color{gray}
+  \item
+
+\end{flushright}
+
+\vspace{-36 pt}
+
+\begin{center}
+  \textbf{\Huge \scshape Rishabh Jain} \\ \vspace{8pt}
+  \small
+  \faIcon{mobile}
+  \href{tel:+918799771287}{{+91 8799771287}} $  $
+  \faIcon{envelope}
+  \href{mailto:rishijain1712@gmail.com}
+  {rishijain1712@gmail.com}
+  $ $
+  \faIcon{linkedin}
+  {\href{https://www.linkedin.com/in/rishabh-jain-069005224}{rishabh-jain}} $ $
+  \faGithub $ $
+  {\href{https://github.com/r-icks}{r-icks}}
+\end{center}
+
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Manipal Institute of Technology - Manipal}{2021 - July 2025}
+{B. Tech in Information Technology — Minor Specialization in Big Data}
+{(\textbf{Achiever's Scholarship ×2}) CGPA 9.43}
+\resumeSubheading
+{Amity International School}{2021}
+{CBSE Class XII (Physics, Chemistry, Math, Computer Science)}
+{93.6\%}
+\resumeSubSubheading
+{CBSE Class X}{92.8\%}
+\vspace{7 pt}
+
+\resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+
+        {Java, Spring Boot \& WebFlux, ReactJS, Redux, Node.js, SQL, NoSQL, Neo4j, Bash, PowerShell, Kafka, GraphQL, Jest, JUnit, Mockito, Cucumber, Gherkin, AWS, Terraform, Python (Quart \& Flask), C, C++, Arduino, Agile, Jira, Confluence, REST, HTTP, WebSockets, Docker, Kotlin, Jules, Jenkins}
+        }}
+\end{itemize}
+
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{JP Morgan Chase} $|$ \footnotesize\emph {Bangalore, IND }$|${ Software Engineer - 1} \vspace{1pt}}{January 2025 - Current}
+{\small{\resumeItemListStart
+    \resumeItem{Designed and developed a foreign exchange module for cross-currency merchant settlements and trade orchestration, from repository creation and architecture to production deployment, leveraging AWS Step Functions, Lambda, Glue, EventBridge, and Terraform. Collaborated with Product Owner to align with business goals, improving resource efficiency and profitability through enhanced trading techniques.}
+    \resumeItem{Developing a scalable, modern merchant funding platform for high-volume bulk payouts using Java Spring WebFlux deployed via Spinnaker and provisioned using Terraform.}
+    \resumeItem{Built a transaction simulation framework for e-wallet reject/return flows, integrated Julian date logic with cached holiday datasets, automated PGP certificate expiry alerts, and remediated path traversal vulnerabilities.}
+    \resumeItem{Investigated and resolved a critical production incident caused by a race condition from unexpected upstream behavior, designed and implemented a robust fix.}
+    \resumeItemListEnd
+  }}
+
+\resumeProjectHeading
+{\textbf{Bug Base} $|$ \footnotesize\emph {Remote, IND }$|${ Full Stack Development Intern } \vspace{1pt}}{January 2024 – January 2025}
+{\small{\resumeItemListStart
+    \resumeItem{Pentest Copilot - external, internal \& phishing assessment for automated Pen-testing. PowerShell \& Bash modules for hash identification \& cracking, secrets extraction for windows/Linux/macOS. Active Directory exploits including ADCS, Zerologon, Kerberoasting, FTP, SMB, RDP etc. Integration of security tools including Responder, SharpHound, NetExec with multi- threading and customer parsers. Windows service execution via C++ remote code execution and reflective injection for agent deployment, bypassing Defender. Used tools like Ligolo-ng, Squid Proxy, Ngrok \& VPNs for testing on VMs. Cloud enumeration for AWS, GCP, and Azure, and integrated a TOR proxy for anonymity}
+    \resumeItem{Actively worked on client requested features and application enhancements. Middleware to enhance concurrent access and spam prevention, incorporating soft banning. Middleware for Pentest Copilot to establish persistent SSH \& VPN connections and timeout idle channels. Improved backend service efficiency by over 70\% by optimizing queries.}
+    \resumeItemListEnd
+  }}
+
+\resumeProjectHeading
+{\textbf{Publicis Sapient} $|$ \footnotesize\emph {Noida, IND }$|${ Engineering Intern} \vspace{1pt}}{May 2024 - July 2024}
+{\small{\resumeItemListStart
+    \resumeItem{Maintaining and enhancing Spring Boot applications for One Savings Bank, focusing on the FINCRIME and CIAM.}
+    \resumeItem{Responsibilities include implementing Java microservices with Kafka, performing unit and integration testing}
+    \resumeItemListEnd
+  }}
+
+\resumeProjectHeading
+{\textbf{Samsung Prism} $|$ \footnotesize\emph {Remote, IND }$|${ Project Intern} \vspace{1pt}}{2023}
+{\small{\resumeItemListStart
+    \resumeItem{TTS incorporating emotions using Tacotron 2 \& Wavesurfer.js application to correct word timestamp.}
+    \resumeItemListEnd
+  }}
+\resumeSubHeadingListEnd
+% -------------------- PROJECTS --------------------
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Technical Secretary - Student Council} $|$ MIT, Manipal \footnotesize\emph  {}{} \vspace{1pt}}{2023 - 2024}
+{\small{\resumeItemListStart
+    \resumeItem{Partnered with college administration to identify and execute digital transformation projects, automating high-friction, manual processes to improve efficiency and transparency across campus operations.}
+    \resumeItem{Streamlined event entry for 9000 students by designing \& implementing a QR system, replacing cumbersome band collection. Eliminated queues and false entries, enhancing efficiency and reduced queue time from 3-4 hours to less than 5 minutes. Utilized local deployment with DB migration and wireless LAN for rapid scanning.}
+    \resumeItem{Built a web app to digitize student club and project room allocation, replacing multi-signature paper approvals with an online workflow. Added concurrency controls to prevent race conditions and maintained a centralized availability database.}
+    \resumeItem{Oversaw all technical clubs, fests, and events across the institution for the academic year, ensuring smooth operations and resource coordination.}
+    \resumeItemListEnd
+  }}
+
+\resumeProjectHeading
+{\textbf{Manipal Hackathon 2023 - Website} $|$ MIT, Manipal \footnotesize\emph{} \vspace{1pt}}{2023}
+{\small{\resumeItemListStart
+    \resumeItem{Individually designed and developed the complete event website — the first student-built website in college history to be approved and deployed to production — enabling online registration, team formation, idea submission, result declaration, and live statistics tracking.}
+    \resumeItem{Built an admin portal to manage submissions and the online phase, ensuring efficient control and monitoring for organizers.}
+    \resumeItem{Developed an intuitive judges’ portal optimized for both mobile and desktop, enabling judges of all ages and technical proficiency to seamlessly score teams during offline rounds.}
+    \resumeItemListEnd
+  }}
+
+\resumeProjectHeading
+{\textbf{Emotional Text-to-Speech System} $|$  Samsung PRISM $|$\footnotesize\emph  {\href{https://www.samsungprism.com/Profile/Document/323VI0432219.pdf}{Link}}\vspace{1pt}}{March 2023 - September 2023}
+{\small{\resumeItemListStart
+    \resumeItem{TTS incorporating emotions using Tacotron 2 \& Wavesurfer.js application to correct word timestamp.}
+    \resumeItemListEnd
+  }}
+\resumeSubHeadingListEnd
+
+\section{Certifications \& Learnings}
+\resumeSubHeadingListStart
+\resumeCertHeading{\textbf{HashiCorp Certified: Terraform Associate} $|$ \footnotesize\emph{\href{https://www.credly.com/badges/8c767383-3f07-4103-881c-bd0f7b1eba3a/public_url}{Link}}}{}
+\resumeCertHeading{\textbf{Amazon ML Summer School - 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1Pe39ukmHHIuC-mangq8pGkVITWgn6Cvx/view}{Link}}}{}
+\resumeCertHeading{\textbf{MERN (MongoDB, ExpressJS, ReactJs, NodeJs, Redux)} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-e4fa1193-cf9b-4629-9caf-00123002684f/}{Link}}}{}
+\resumeCertHeading{\textbf{GraphQL} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-cdd9b580-29d9-4e68-b7d1-4f1694867a20/}{Link}}}{}
+\resumeCertHeading{\textbf{Spring Boot \& Spring Cloud - Google Cloud} $|$ \footnotesize\emph{\href{https://www.coursera.org/account/accomplishments/verify/657NX5XKKVLN}{Link}}}{}
+\resumeCertHeading{\textbf{Java Spring Secure Coding Assessment - JPMC} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1lAvoxhe0fMDDaGdPwHenOmlsUk5okt7z/view?usp=sharing}{Link}}}{}
+\resumeSubHeadingListEnd
+\vspace{1pt}
+\section{Competitions \& Hackathons}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{JPMC Internal – Weeklong Agile Development Hackathon}}{Winner}
+
+\resumeProjectHeading
+{\textbf{JPMC Internal – Global Capture the Flag Event}}{Winner}
+
+\resumeProjectHeading
+{\textbf{Adobe Gensolve 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1pWoLmEphNQBDTTapcTiruJGMoiKKBAM_/view?usp=sharing}{Link}}}{Top 5\%ile}
+{\small{\resumeItemListStart
+    \resumeItem{React \& Flask based doodling platform for polyline transformation, symmetry detection, and regularization using OpenCV.}
+    \resumeItemListEnd}}
+
+\resumeProjectHeading
+{\textbf{DEVSPRINT – Aurora 2024}}{Runner-Up}
+{\small{\resumeItemListStart
+    \resumeItem{OCR + LLM-based application to automate medicine filling from doctor's prescriptions, enhancing efficiency.}
+    \resumeItemListEnd}}
+
+\resumeProjectHeading
+{\textbf{Commonwealth Virtual Exchange – ACU}}{People's Choice Award}
+{\small{\resumeItemListStart
+    \resumeItem{Collaborated with peers from diverse institutions, fostering cross-disciplinary and cross-cultural teamwork.}
+    \resumeItemListEnd}}
+
+\resumeProjectHeading
+{\textbf{JPMC Code for Good 2024}}{}
+{\small{\resumeItemListStart
+    \resumeItem{Addressed EXPA’s travel management issues via geolocation-based trainer ranking, implemented assessment feedback loops, automated certification pipelines, and improved engagement via SMS/call reminders.}
+    \resumeItemListEnd}}
+\resumeSubHeadingListEnd
+\end{document}

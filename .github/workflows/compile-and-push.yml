@@ -1,0 +1,39 @@
+name: Build LaTeX and Upload PDF
+
+on:
+  push:
+    branches:
+      - master
+      - 'feature/*'
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+
+      - name: Compile LaTeX
+        run: latexmk -pdf -interaction=nonstopmode resume.tex
+
+      - name: Set Dropbox target path
+        id: dropbox-path
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "master" ]]; then
+            echo "TARGET_PATH=master.pdf" >> $GITHUB_ENV
+          else
+            echo "TARGET_PATH=feature.pdf" >> $GITHUB_ENV
+          fi
+
+      - name: Upload to Dropbox
+        uses: Lewuathe/dropbox-github-action@v1.0.3
+        with:
+          dropbox-app-key: ${{ secrets.DROPBOX_APP_KEY }}
+          dropbox-app-secret: ${{ secrets.DROPBOX_APP_SECRET }}
+          dropbox-refresh-token: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          source-path: resume.pdf
+          target-path: ${{ env.TARGET_PATH }}
+          write-mode: overwrite
