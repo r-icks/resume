@@ -15,8 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Compile LaTeX
-        run: latexmk -pdf -interaction=nonstopmode resume.tex
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: resume.tex
 
       - name: Set Dropbox target path
         id: dropbox-path
