@@ -9,14 +9,12 @@ on:
 jobs:
   build-and-upload:
     runs-on: ubuntu-latest
-    container:
-      image: blang/latex:ctanfull
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: resume.tex
 
