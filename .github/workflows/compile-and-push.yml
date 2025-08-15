@@ -23,9 +23,9 @@ jobs:
         run: |
           BRANCH_NAME="${GITHUB_REF##*/}"
           if [[ "$BRANCH_NAME" == "master" ]]; then
-            echo "TARGET_PATH=master.pdf" >> $GITHUB_ENV
+            echo "TARGET_PATH=final.pdf" >> $GITHUB_ENV
           else
-            echo "TARGET_PATH=feature.pdf" >> $GITHUB_ENV
+            echo "TARGET_PATH=dev.pdf" >> $GITHUB_ENV
           fi
 
       - name: Generate Dropbox access token

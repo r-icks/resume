@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Matty
+% Author : Rishabh Jain
 % Based on: https://github.com/jakegut/resume (which was based on https://github.com/sb2nov/resume)
 % License : MIT
 %------------------------
@@ -65,6 +65,11 @@
   }
 }
 
+\newcommand{\resumeItemHack}[1]{
+  \item\small{
+    {#1 \vspace{-8pt}}
+  }
+}
 
 
 \newcommand{\resumeSubheading}[4]{
@@ -193,12 +198,6 @@
     \resumeItemListEnd
   }}
 
-\resumeProjectHeading
-{\textbf{Samsung Prism} $|$ \footnotesize\emph {Remote, IND }$|${ Project Intern} \vspace{1pt}}{2023}
-{\small{\resumeItemListStart
-    \resumeItem{TTS incorporating emotions using Tacotron 2 \& Wavesurfer.js application to correct word timestamp.}
-    \resumeItemListEnd
-  }}
 \resumeSubHeadingListEnd
 % -------------------- PROJECTS --------------------
 \section{Projects}
@@ -216,7 +215,7 @@
   }}
 
 \resumeProjectHeading
-{\textbf{Manipal Hackathon 2023 - Website} $|$ MIT, Manipal \footnotesize\emph{} \vspace{1pt}}{2023}
+{\textbf{Organizing Team – Developed Website, Manipal Hackathon 2023} $|$ MIT, Manipal \footnotesize\emph{} \vspace{1pt}}{2023}
 {\small{\resumeItemListStart
     \resumeItem{Individually designed and developed the complete event website — the first student-built website in college history to be approved and deployed to production — enabling online registration, team formation, idea submission, result declaration, and live statistics tracking.}
     \resumeItem{Built an admin portal to manage submissions and the online phase, ensuring efficient control and monitoring for organizers.}
@@ -236,42 +235,42 @@
 \resumeSubHeadingListStart
 \resumeCertHeading{\textbf{HashiCorp Certified: Terraform Associate} $|$ \footnotesize\emph{\href{https://www.credly.com/badges/8c767383-3f07-4103-881c-bd0f7b1eba3a/public_url}{Link}}}{}
 \resumeCertHeading{\textbf{Amazon ML Summer School - 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1Pe39ukmHHIuC-mangq8pGkVITWgn6Cvx/view}{Link}}}{}
-\resumeCertHeading{\textbf{MERN (MongoDB, ExpressJS, ReactJs, NodeJs, Redux)} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-e4fa1193-cf9b-4629-9caf-00123002684f/}{Link}}}{}
-\resumeCertHeading{\textbf{GraphQL} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-cdd9b580-29d9-4e68-b7d1-4f1694867a20/}{Link}}}{}
+% \resumeCertHeading{\textbf{MERN (MongoDB, ExpressJS, ReactJs, NodeJs, Redux)} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-e4fa1193-cf9b-4629-9caf-00123002684f/}{Link}}}{}
+\resumeCertHeading{\textbf{GraphQL by Example - Udemy} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-cdd9b580-29d9-4e68-b7d1-4f1694867a20/}{Link}}}{}
 \resumeCertHeading{\textbf{Spring Boot \& Spring Cloud - Google Cloud} $|$ \footnotesize\emph{\href{https://www.coursera.org/account/accomplishments/verify/657NX5XKKVLN}{Link}}}{}
-\resumeCertHeading{\textbf{Java Spring Secure Coding Assessment - JPMC} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1lAvoxhe0fMDDaGdPwHenOmlsUk5okt7z/view?usp=sharing}{Link}}}{}
+% \resumeCertHeading{\textbf{Java Spring Secure Coding Assessment - JPMC} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1lAvoxhe0fMDDaGdPwHenOmlsUk5okt7z/view?usp=sharing}{Link}}}{}
 \resumeSubHeadingListEnd
 \vspace{1pt}
 \section{Competitions \& Hackathons}
 \resumeSubHeadingListStart
-\resumeProjectHeading
+\resumeCertHeading
 {\textbf{JPMC Internal – Weeklong Agile Development Hackathon}}{Winner}
 
-\resumeProjectHeading
+\resumeCertHeading
 {\textbf{JPMC Internal – Global Capture the Flag Event}}{Winner}
 
-\resumeProjectHeading
+\resumeCertHeading
 {\textbf{Adobe Gensolve 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1pWoLmEphNQBDTTapcTiruJGMoiKKBAM_/view?usp=sharing}{Link}}}{Top 5\%ile}
 {\small{\resumeItemListStart
-    \resumeItem{React \& Flask based doodling platform for polyline transformation, symmetry detection, and regularization using OpenCV.}
+    \resumeItemHack{React \& Flask based doodling platform for polyline transformation, symmetry detection, and regularization using OpenCV.}
     \resumeItemListEnd}}
 
-\resumeProjectHeading
+\resumeCertHeading
 {\textbf{DEVSPRINT – Aurora 2024}}{Runner-Up}
 {\small{\resumeItemListStart
-    \resumeItem{OCR + LLM-based application to automate medicine filling from doctor's prescriptions, enhancing efficiency.}
+    \resumeItemHack{OCR + LLM-based application to automate medicine filling from doctor's prescriptions, enhancing efficiency.}
     \resumeItemListEnd}}
 
-\resumeProjectHeading
+\resumeCertHeading
 {\textbf{Commonwealth Virtual Exchange – ACU}}{People's Choice Award}
 {\small{\resumeItemListStart
-    \resumeItem{Collaborated with peers from diverse institutions, fostering cross-disciplinary and cross-cultural teamwork.}
+    \resumeItemHack{Collaborated with peers from diverse institutions, fostering cross-disciplinary and cross-cultural teamwork.}
     \resumeItemListEnd}}
 
-\resumeProjectHeading
+\resumeCertHeading
 {\textbf{JPMC Code for Good 2024}}{}
 {\small{\resumeItemListStart
-    \resumeItem{Addressed EXPA’s travel management issues via geolocation-based trainer ranking, implemented assessment feedback loops, automated certification pipelines, and improved engagement via SMS/call reminders.}
+    \resumeItemHack{Addressed EXPA’s travel management issues via geolocation-based trainer ranking, implemented assessment feedback loops, automated certification pipelines, and improved engagement via SMS/call reminders.}
     \resumeItemListEnd}}
 \resumeSubHeadingListEnd
 \end{document}
