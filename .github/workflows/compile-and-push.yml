@@ -53,6 +53,7 @@ jobs:
             echo "TARGET_PATH=/master.pdf" >> $GITHUB_ENV
           else
             echo "TARGET_PATH=/feature.pdf" >> $GITHUB_ENV
+          fi
 
       - name: Upload PDF to Dropbox
         run: |
