@@ -9,12 +9,11 @@ on:
 jobs:
   build-and-upload:
     runs-on: ubuntu-latest
+    container:
+      image: blang/latex:ctanfull
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume.tex
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
       - name: Compile LaTeX
         run: latexmk -pdf -interaction=nonstopmode resume.tex
@@ -22,7 +21,8 @@ jobs:
       - name: Set Dropbox target path
         id: dropbox-path
         run: |
-          if [[ "${GITHUB_REF##*/}" == "master" ]]; then
+          BRANCH_NAME="${GITHUB_REF##*/}"
+          if [[ "$BRANCH_NAME" == "master" ]]; then
             echo "TARGET_PATH=master.pdf" >> $GITHUB_ENV
           else
             echo "TARGET_PATH=feature.pdf" >> $GITHUB_ENV
