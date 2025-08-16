@@ -58,17 +58,20 @@ jobs:
       - name: Upload PDF to Dropbox
         run: |
           echo "Uploading resume.pdf to Dropbox at $TARGET_PATH"
+
           response=$(curl -s -w "%{http_code}" -o /tmp/dropbox_response.json -X POST https://content.dropboxapi.com/2/files/upload \
             --header "Authorization: Bearer $ACCESS_TOKEN" \
             --header "Dropbox-API-Arg: {\"path\":\"$TARGET_PATH\",\"mode\":\"overwrite\",\"autorename\":false}" \
             --header "Content-Type: application/octet-stream" \
             --data-binary @resume.pdf)
 
-          http_code="${response: -3}"  # extract last 3 characters (HTTP code)
+          http_code="${response: -3}"  
+          echo "Dropbox API response:"
+          cat /tmp/dropbox_response.json
+          echo "HTTP status code: $http_code"
 
           if [[ "$http_code" != "200" ]]; then
-            echo "Dropbox upload failed. Response:"
-            cat /tmp/dropbox_response.json
+            echo "Dropbox upload failed."
             exit 1
           fi
 

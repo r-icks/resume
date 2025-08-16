@@ -36,7 +36,7 @@
 \addtolength{\oddsidemargin}{-0.75 in}
 \addtolength{\evensidemargin}{0.5 in}
 \addtolength{\textwidth}{1.5 in}
-\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\topmargin}{-0.85in} % Default was -.5in
 \addtolength{\textheight}{1.5 in}
 
 \urlstyle{same}
@@ -87,6 +87,15 @@
     \end{tabular*}\vspace{-10 pt}
 }
 
+\newcommand{\resumeSchoolHeading}[4]{
+\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1} & #2 \\
+  \textit{\small #3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-7pt}
+}
+
+
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -94,18 +103,28 @@
     \end{tabular*}\vspace{-7 pt}
 }
 
-\newcommand{\resumeCertHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small #1 & \small #2 \\
-    \end{tabular*}\vspace{-8pt} 
+\newcommand{\resumeCertTwoColumns}[4]{
+  \item
+    \begin{minipage}[t]{0.48\textwidth}
+      \small #1 \hfill #2
+    \end{minipage}%
+      \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+      \small #3 \hfill #4
+    \end{minipage}\vspace{-8pt}
 }
 
+
+\newcommand{\resumeCertHeading}[1]{
+    \item \small #1 \vspace{-4.5pt}
+}
+
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-7 pt}}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.10 in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\vspace{-1pt}\begin{itemize}[leftmargin=0.10 in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4 pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5 pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -142,7 +161,7 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
 
-        {10x Full-Stack Developer, adaptable to any tech stack. I dive deep into the what, why, and how before acting. I leverage AI to speed up work and problem-solving skills to optimize solutions. Passionate tinkerer, building projects from real-world problems, solving puzzles, and tackling DSA challenges.}
+        {Full-Stack Developer with extensive hands-on experience through internships and full-time work, tech-agnostic \& versatile. I dive deep into the what, why, and how before acting. Leveraging AI to deliver more, faster, and be a 10X developer. Solving real-world problems, puzzles, and tackling DSA challenges.}
         }}
 \end{itemize}
 
@@ -155,13 +174,16 @@
 {Manipal Institute of Technology - Manipal}{2021 - July 2025}
 {B. Tech in Information Technology — Minor Specialization in Big Data}
 {(\textbf{Achiever's Scholarship ×2}) CGPA 9.43}
-\resumeSubheading
-{Amity International School}{2021}
-{CBSE Class XII (Physics, Chemistry, Math, Computer Science)}
-{93.6\%}
-\resumeSubSubheading
-{CBSE Class X}{92.8\%}
-\vspace{7 pt}
+\resumeSchoolHeading
+{Amity International School (CBSE)}{2021}
+{Class XII: Physics, Chemistry, Math, CS: 93.6\%}{Class X: 92.8\%}
+% \resumeSubheading
+% {Amity International School (CBSE)}{2021}
+% {Class XII (Physics, Chemistry, Math, Computer Science)}
+% {93.6\%}
+% \resumeSubSubheading
+% {Class X}{92.8\%}
+% \vspace{7 pt}
 
 \resumeSubHeadingListEnd
 
@@ -173,6 +195,7 @@
         {Java, Spring Boot \& WebFlux, ReactJS, Redux, Node.js, SQL, NoSQL, Neo4j, Bash, PowerShell, Kafka, GraphQL, Jest, JUnit, Mockito, Cucumber, Gherkin, AWS, Terraform, Python (Quart \& Flask), C, C++, Arduino, Agile, Jira, Confluence, REST, HTTP, WebSockets, Docker, Kotlin, Jules, Jenkins, Git}
         }}
 \end{itemize}
+\vspace{-9pt}
 
 
 % -------------------- EXPERIENCE --------------------
@@ -180,12 +203,12 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{JP Morgan Chase} $|$ \footnotesize\emph {Bangalore, IND }$|${ Software Engineer - 1} \vspace{1pt}}{January 2025 - Current}
+{\textbf{JP Morgan Chase - Payments Team (FX)} $|$ \footnotesize\emph {Bangalore, IND }$|${ Software Engineer - 1} \vspace{1pt}}{\textbf{January 2025 - Current}}
 {\small{\resumeItemListStart
-    \resumeItem{Designed and developed a foreign exchange module for cross-currency merchant settlements and trade orchestration, from repository creation and architecture to production deployment, leveraging AWS Step Functions, Lambda, Glue, EventBridge, and Terraform. Collaborated with Product Owner to align with business goals, improving resource efficiency and profitability through enhanced trading techniques.}
-    \resumeItem{Developing a scalable, modern merchant funding platform for high-volume bulk payouts using Java Spring WebFlux deployed via Spinnaker and provisioned using Terraform.}
+    \resumeItem{Building a scalable merchant funding platform for high-volume payouts using modern tech stack: Java Spring WebFlux, Python, AWS cloud, Spinnaker}
+    \resumeItem{Designing and developing a foreign exchange module for cross-currency merchant settlements and trade orchestration, from repository creation and architecture to production deployment, leveraging AWS Step Functions, Lambda, Glue, EventBridge, and Terraform. Collaborated with Product Owner to align with business goals, improving resource efficiency and profitability through enhanced trading techniques.}
     \resumeItem{Built a transaction simulation framework for e-wallet reject/return flows, integrated Julian date logic with cached holiday datasets, automated PGP certificate expiry alerts, and remediated path traversal vulnerabilities.}
-    \resumeItem{Investigated and resolved a critical production incident caused by a race condition from unexpected upstream behavior, designed and implemented a robust fix.}
+    \resumeItem{Investigated \& resolved critical production incident due to a race condition from unexpected upstream behavior; implemented a robust fix.}
     \resumeItemListEnd
   }}
 
@@ -214,8 +237,8 @@
 \resumeProjectHeading
 {\textbf{Technical Secretary - Student Council} $|$ MIT, Manipal \footnotesize\emph  {}{} \vspace{1pt}}{2023 - 2024}
 {\small{\resumeItemListStart
-    \resumeItem{Partnered with college administration to identify and execute digital transformation projects, automating high-friction, manual processes to improve efficiency and transparency across campus operations.}
-    \resumeItem{Streamlined event entry for 9000 students by designing \& implementing a QR system, replacing cumbersome band collection. Eliminated queues and false entries, enhancing efficiency and reduced queue time from 3-4 hours to less than 5 minutes. Utilized local deployment with DB migration and wireless LAN for rapid scanning.}
+    \resumeItem{Automated high-friction manual processes in collaboration with administration, boosting efficiency and transparency.}
+    \resumeItem{Streamlined event entry for 9000 students by designing \& implementing a QR system, replacing cumbersome band collection. Eliminated multiple 3–4 hr queues and false entries increasing efficiency. Utilized local deployment with end of day DB migration and wireless LAN for rapid scanning.}
     \resumeItem{Built a web app to digitize student club and project room allocation, replacing multi-signature paper approvals with an online workflow. Added concurrency controls to prevent race conditions and maintained a centralized availability database.}
     \resumeItem{Oversaw all technical clubs, fests, and events across the institution for the academic year, ensuring smooth operations and resource coordination.}
     \resumeItemListEnd
@@ -226,7 +249,7 @@
 {\small{\resumeItemListStart
     \resumeItem{Individually designed and developed the complete event website — the first student-built website in college history to be approved and deployed to production — enabling online registration, team formation, idea submission, result declaration, and live statistics tracking.}
     \resumeItem{Built an admin portal to manage submissions and the online phase, ensuring efficient control and monitoring for organizers.}
-    \resumeItem{Developed an intuitive judges’ portal optimized for both mobile and desktop, enabling judges of all ages and technical proficiency to seamlessly score teams during offline rounds.}
+    \resumeItem{Developed an intuitive mobile/desktop judges’ portal, enabling judges of all ages and technical skill sets to seamlessly score teams offline.}
     \resumeItemListEnd
   }}
 
@@ -240,44 +263,39 @@
 
 \section{Certifications \& Learnings}
 \resumeSubHeadingListStart
-\resumeCertHeading{\textbf{HashiCorp Certified: Terraform Associate} $|$ \footnotesize\emph{\href{https://www.credly.com/badges/8c767383-3f07-4103-881c-bd0f7b1eba3a/public_url}{Link}}}{}
-\resumeCertHeading{\textbf{Amazon ML Summer School - 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1Pe39ukmHHIuC-mangq8pGkVITWgn6Cvx/view}{Link}}}{}
-% \resumeCertHeading{\textbf{MERN (MongoDB, ExpressJS, ReactJs, NodeJs, Redux)} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-e4fa1193-cf9b-4629-9caf-00123002684f/}{Link}}}{}
-\resumeCertHeading{\textbf{GraphQL by Example - Udemy} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-cdd9b580-29d9-4e68-b7d1-4f1694867a20/}{Link}}}{}
-\resumeCertHeading{\textbf{Spring Boot \& Spring Cloud - Google Cloud} $|$ \footnotesize\emph{\href{https://www.coursera.org/account/accomplishments/verify/657NX5XKKVLN}{Link}}}{}
-% \resumeCertHeading{\textbf{Java Spring Secure Coding Assessment - JPMC} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1lAvoxhe0fMDDaGdPwHenOmlsUk5okt7z/view?usp=sharing}{Link}}}{}
+\resumeCertTwoColumns
+{\textbf{HashiCorp Certified: Terraform Associate} $|$ \footnotesize\emph{\href{https://www.credly.com/badges/8c767383-3f07-4103-881c-bd0f7b1eba3a/public_url}{Link}}}
+{}
+{\textbf{Amazon ML Summer School - 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1Pe39ukmHHIuC-mangq8pGkVITWgn6Cvx/view}{Link}}}
+{}
+\resumeCertTwoColumns
+{\textbf{GraphQL by Example - Udemy} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-cdd9b580-29d9-4e68-b7d1-4f1694867a20/}{Link}}}
+{}
+{\textbf{Spring Boot \& Spring Cloud - Google Cloud} $|$ \footnotesize\emph{\href{https://www.coursera.org/account/accomplishments/verify/657NX5XKKVLN}{Link}}}
+{}
 \resumeSubHeadingListEnd
 \vspace{1pt}
+% \resumeCertTwoColumns
+% {\textbf{MERN (MongoDB, ExpressJS, ReactJs, NodeJs, Redux)} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-e4fa1193-cf9b-4629-9caf-00123002684f/}{Link}}}
+
+
+
 \section{Competitions \& Hackathons}
 \resumeSubHeadingListStart
 \resumeCertHeading
-{\textbf{JPMC Internal – Weeklong Agile Development Hackathon}}{Winner}
+{\textbf{JPMC - Weeklong Agile Hackathon $|$ Winner } $|$ Won by rapidly delivering high-priority features through effective work distribution and peer learning}
+\resumeCertHeading
+{\textbf{JPMC – Global Capture the Flag Event $|$ Winner } $|$ Captured most OWASP web vulnerabilities, achieving top global score.}
+\resumeCertHeading
+{\textbf{Adobe Gensolve 2024 $|$ Top 5\%ile } $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1pWoLmEphNQBDTTapcTiruJGMoiKKBAM_/view?usp=sharing}{Link}} $|$ React \& Flask based doodling platform for polyline transformation, symmetry detection, and regularization using OpenCV. }
 
 \resumeCertHeading
-{\textbf{JPMC Internal – Global Capture the Flag Event}}{Winner}
+{\textbf{DEVSPRINT @ ISTE Aurora 2024 $|$ Runner-Up } | \emph{OCR-LLM based app automating medicine filling from prescriptions, improving care-taker efficiency. }}
 
 \resumeCertHeading
-{\textbf{Adobe Gensolve 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1pWoLmEphNQBDTTapcTiruJGMoiKKBAM_/view?usp=sharing}{Link}}}{Top 5\%ile}
-{\small{\resumeItemListStart
-    \resumeItemHack{React \& Flask based doodling platform for polyline transformation, symmetry detection, and regularization using OpenCV.}
-    \resumeItemListEnd}}
+{\textbf{Commonwealth Virtual Exchange – ACU $|$ People's Choice Award} $|$ \emph{Collaborated with peers internationally, fostering cross-disciplinary teamwork}}
 
 \resumeCertHeading
-{\textbf{DEVSPRINT – Aurora 2024}}{Runner-Up}
-{\small{\resumeItemListStart
-    \resumeItemHack{OCR + LLM-based application to automate medicine filling from doctor's prescriptions, enhancing efficiency.}
-    \resumeItemListEnd}}
-
-\resumeCertHeading
-{\textbf{Commonwealth Virtual Exchange – ACU}}{People's Choice Award}
-{\small{\resumeItemListStart
-    \resumeItemHack{Collaborated with peers from diverse institutions, fostering cross-disciplinary and cross-cultural teamwork.}
-    \resumeItemListEnd}}
-
-\resumeCertHeading
-{\textbf{JPMC Code for Good 2024}}{}
-{\small{\resumeItemListStart
-    \resumeItemHack{Addressed EXPA’s travel management issues via geolocation-based trainer ranking, implemented assessment feedback loops, automated certification pipelines, and improved engagement via SMS/call reminders.}
-    \resumeItemListEnd}}
+{\textbf{JPMC Code for Good 2024 $|$} \emph{Addressed EXPA’s travel management issues via geolocation-based trainer ranking, implemented assessment feedback loops, automated certification pipelines, and improved engagement via SMS/call reminders.}}
 \resumeSubHeadingListEnd
 \end{document}
