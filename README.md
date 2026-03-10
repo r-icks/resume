@@ -4,6 +4,18 @@ This repository contains a LaTeX project for generating a resume, along with a G
 
 ---
 
+## Latest Generated PDFs
+
+- **Master Branch Resume:**  
+  https://www.dropbox.com/scl/fi/mn9mzbjypnxnbxvse28xm/master.pdf?rlkey=a18k93m5k5nbf1tp1kxnkysls&e=4&st=ynhmhloz&dl=0
+
+- **Feature Branch Resume:**  
+  https://www.dropbox.com/scl/fi/vg84v9yr3tauf7wmm1t3s/feature.pdf?rlkey=qz4c6u6en04ht23t0bb0rm94b&e=2&dl=0
+
+These links always point to the **latest compiled PDFs**, automatically updated by GitHub Actions.
+
+---
+
 ## Features
 
 - Compile LaTeX documents automatically on push.
