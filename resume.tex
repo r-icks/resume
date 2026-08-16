@@ -1,14 +1,10 @@
 %-------------------------
 % Resume in Latex
-% Author : Rishabh Jain
-% Based on: https://github.com/jakegut/resume (which was based on https://github.com/sb2nov/resume)
+% Author : Rishabh Jain (Final 10/10 - One Page, Cert Fixed)
 % License : MIT
 %------------------------
 
-
 \documentclass[10pt]{article}
-\usepackage{times} % Times New Roman font package
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -27,20 +23,19 @@
 
 % -------------------- FONT --------------------
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.75 in}
-\addtolength{\evensidemargin}{0.5 in}
-\addtolength{\textwidth}{1.5 in}
-\addtolength{\topmargin}{-0.85in} % Default was -.5in
-\addtolength{\textheight}{1.5 in}
+% Tighter margins for 1-page fit
+\addtolength{\oddsidemargin}{-0.80 in}
+\addtolength{\evensidemargin}{0.40 in}
+\addtolength{\textwidth}{1.60 in}
+\addtolength{\topmargin}{-0.95in}
+\addtolength{\textheight}{1.65in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -50,12 +45,10 @@
   \vspace{-9 pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
-% Subsection formatting
 \titleformat{\subsection}{
   \vspace{- 9 pt}\scshape\raggedright\large
 }{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-3pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 % -------------------- CUSTOM COMMANDS --------------------
@@ -65,26 +58,12 @@
   }
 }
 
-\newcommand{\resumeItemHack}[1]{
-  \item\small{
-    {#1 \vspace{-8pt}}
-  }
-}
-
-
 \newcommand{\resumeSubheading}[4]{
 \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-10 pt}
 }
 
 \newcommand{\resumeSchoolHeading}[4]{
@@ -95,7 +74,6 @@
 \end{tabular*}\vspace{-7pt}
 }
 
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -103,205 +81,167 @@
     \end{tabular*}\vspace{-7 pt}
 }
 
-\newcommand{\resumeCertTwoColumns}[4]{
-  \item
-    \begin{minipage}[t]{0.48\textwidth}
-      \small #1 \hfill #2
-    \end{minipage}%
-      \hfill
-    \begin{minipage}[t]{0.48\textwidth}
-      \small #3 \hfill #4
-    \end{minipage}\vspace{-8pt}
-}
-
-
 \newcommand{\resumeCertHeading}[1]{
     \item \small #1 \vspace{-4.5pt}
 }
 
+% ----- FIXED: 3-column command with fixed gaps and smaller font -----
+\newcommand{\resumeCertThreeColumns}[3]{
+  \item
+    \begin{minipage}[t]{0.30\textwidth}
+      \scriptsize #1
+    \end{minipage}%
+    \hspace{0.02\textwidth}
+    \begin{minipage}[t]{0.30\textwidth}
+      \scriptsize #2
+    \end{minipage}%
+    \hspace{0.02\textwidth}
+    \begin{minipage}[t]{0.30\textwidth}
+      \scriptsize #3
+    \end{minipage}\vspace{-8pt}
+}
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-7 pt}}
-\newcommand{\resumeSubHeadingListStart}{\vspace{-1pt}\begin{itemize}[leftmargin=0.10 in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\vspace{-1pt}\begin{itemize}[leftmargin=0.08 in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.08in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5 pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \setlength{\footskip}{4.08003pt}
 
 % -------------------- START OF DOCUMENT --------------------
 \begin{document}
 
-% -------------------- HEADING--------------------
-\begin{flushright}
-  \vspace{-5 pt}
-  \color{gray}
-  \item
-
-\end{flushright}
-
-\vspace{-36 pt}
-
+% -------------------- HEADING --------------------
 \begin{center}
-  \textbf{\Huge \scshape Rishabh Jain} \\ \vspace{8pt}
+  \textbf{\Huge \scshape Rishabh Jain} \\ \vspace{6pt}
   \small
-  \faIcon{mobile}
-  \href{tel:+918799771287}{{+91 8799771287}} $  $
-  \faIcon{envelope}
-  \href{mailto:rishijain1712@gmail.com}
-  {rishijain1712@gmail.com}
-  $ $
-  \faIcon{linkedin}
-  {\href{https://www.linkedin.com/in/rishabh-jain-069005224}{rishabh-jain}} $ $
-  \faGithub $ $
-  {\href{https://github.com/r-icks}{r-icks}}
+  \faIcon{mobile} \href{tel:+918799771287}{+91 8799771287} $ $
+  \faIcon{envelope} \href{mailto:rishijain1712@gmail.com}{rishijain1712@gmail.com} $ $
+  \faIcon{linkedin} \href{https://www.linkedin.com/in/rishabh-jain-069005224}{rishabh-jain} $ $
+  \faGithub \href{https://github.com/r-icks}{ r-icks}
 \end{center}
 
-\begin{itemize}[leftmargin=0.15in, label={}]
+% -------------------- CRISP INTRO --------------------
+\begin{itemize}[leftmargin=0.08in, label={}]
   \small{\item{
-
-        {Full-Stack Developer with extensive hands-on experience through internships and full-time work, tech-agnostic \& versatile. I dive deep into the what, why, and how before acting. Leveraging AI to deliver more, faster, and be a 10X developer. Solving real-world problems, puzzles, and tackling DSA challenges.}
+        \textbf{Software Engineer} passionate about building responsible AI workflows that reduce human toil and accelerate engineering velocity. With deep fundamentals in distributed systems—committed to continuous learning and delivering highly effective, production-grade solutions.
         }}
 \end{itemize}
-
-
-% -------------------- EDUCATION --------------------
-\section{Education}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{Manipal Institute of Technology — Manipal}{\textbf{Rank 1 $|$} 2021 – July 2025}
-{B.Tech in Information Technology  $|$ Minor Specialization: Big Data Analytics}{\textbf{(Achiever's Scholarship ×2) }CGPA: 9.43 }
-\item
-\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-  \small \textbf{WorldQuant University} $|$ Graduate Certificate – Foundations of Financial Engineering &
-  \small \footnotesize\emph{\href{https://www.credly.com/badges/f7aadcde-f2dc-4137-8958-e93a1c89415f}{Credential}} $|$ 2026 \\
-\end{tabular*}\vspace{-6pt}
-\resumeSchoolHeading
-{Amity International School (CBSE)}{2021}
-{Class XII: Physics, Chemistry, Math, CS: 93.6\%}{Class X: 92.8\%}
-\vspace{1pt}
-% \resumeSubheading
-% {Amity International School (CBSE)}{2021}
-% {Class XII (Physics, Chemistry, Math, Computer Science)}
-% {93.6\%}
-% \resumeSubSubheading
-% {Class X}{92.8\%}
-% \vspace{7 pt}
-
-\resumeSubHeadingListEnd
-
-% -------------------- SKILLS --------------------
-\section{Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-
-        \textbf{Languages \& Frameworks:} Java, Python (Quart \& Flask), C, C++, Kotlin, Spring Boot \& WebFlux, ReactJS, Redux, Node.js, Bash, PowerShell \\
-
-        \textbf{Data \& Technologies:} SQL, NoSQL, Neo4j, PySpark, Kafka, GraphQL, REST, WebSockets, Docker, Arduino, MCP, Agentic Systems \\
-
-        \textbf{Cloud \& Tools:} AWS (Glue, Lambda, ECS, EKS etc.), Terraform, Jenkins, Spinnaker, Git, Splunk, JUnit, Mockito, Cucumber, Gherkin, Jira, Confluence
-        }}
-\end{itemize}
-\vspace{-9pt}
 
 
 % -------------------- EXPERIENCE --------------------
 \section{Experience}
 \resumeSubHeadingListStart
 
+% ----- JP MORGAN CHASE -----
 \resumeProjectHeading
-{\textbf{JP Morgan Chase - Payments Team (FX)} $|$ \footnotesize\emph {Bangalore, IND }$|${ Software Engineer - 1} \vspace{1pt}}{\textbf{January 2025 - Current}}
+{\textbf{JP Morgan Chase - Merchant Services (Payments)} $|$ \footnotesize\emph{Bangalore, IND} $|$ \textbf{Software Engineer - 1} \vspace{1pt}}{\textbf{January 2025 - Current}}
 {\small{\resumeItemListStart
-    \resumeItem{Designing and implementing cash management workflows integrating treasury services to ensure sufficient liquidity while minimizing idle capital.}
-    \resumeItem{Designed and developed a foreign exchange (FX) module for cross-currency merchant settlements and trade orchestration, including ingestion of network and provider rates (Visa, Mastercard, JCB, internal liquidity providers), rate precomputation, and merchant rate-sheet generation; proposed and implementing an optimized trading mechanism reducing trade count by 70\%+ and increasing trade profitability by 50\%+.}
-    \resumeItem{Enhancing existing pricing, ledgering, and payout modules within merchant services to support FX transactions and integrated cash management flows.}
-    \resumeItem{Built a transaction simulation framework for e-wallet reject/return flows and continuously expanded automated testing frameworks across merchant services modules, strengthening release validation, uncovering production issues early, and reducing manual testing effort during release cycles.}
-    \resumeItem{Investigated a critical production incident caused by race conditions from unexpected upstream behavior \& implemented a robust concurrency-safe fix; proactively identified and fixed defects in existing production code during feature testing to improve system stability.}
+    \resumeItem{\textbf{Regression Optimization:} Revamped the regression engine for a \textbf{4x speedup}, saving 40-80 employee hours per release. Replaced sequential polling with a \textbf{dependency-graph execution scheduler} enabling parallel event processing and \textbf{multi-stage validations}. Integrated an LLM to auto-resolve cross-event dependencies, surfacing hidden race conditions pre-production.}
+
+    \resumeItem{\textbf{AI-Assisted Finance Certification:} Built an autonomous agent that consolidates Product Owner requirements to generate comprehensive ledger source-of-truth and test scenarios for finance initiatives. Trained by extracting rules from existing source-of-truth and scenarios across prior initiatives, cutting lead time by \textbf{30\%} (saving 60 manual hours per certification).}
+
+    \resumeItem{\textbf{FX Trading Engine \& System Integration:} Architected the cross-currency FX settlement module, integrating with networks, trade providers, fee \& clearing engines, and merchant reporting. Applied \textbf{linear programming} and statistical aggregation to design an optimized trading mechanism, reducing transaction count by \textbf{70\%+} and increasing profitability by \textbf{50\%+}. Led development of FX capability across \textbf{pricing \& sub-ledger} enabling multi-currency settlements for the EU expansion and future global rollouts.}
+
+    \resumeItem{\textbf{Treasury \& Cash Management Automation:} Designed automated treasury workflows using \textbf{Airflow DAGs} and \textbf{AWS Glue}—integrating with treasury to orchestrate intelligent funding/defunding based on real-time ledger balances and payout records.}
+
+    \resumeItem{\textbf{Spark Performance Tuning:} Overhauled Glue/Spark batch jobs—optimized join strategies, introduced lineage breaks and checkpoints to eliminate recomputation overhead. Achieved \textbf{3x throughput} and a \textbf{4x memory footprint reduction}.}
+
+    \resumeItem{\textbf{Production Excellence \& Reliability:} Continuously identify and resolve gaps across the release cycle—including requirement lags, enhancements, and critical defects in existing code—fixing \textbf{20+ critical defects} to date, while ensuring \textbf{multi-region support and failover readiness} for every new feature/module. Maintain \textbf{3x expected BAU velocity} and earn consistent recognition from program management for rapid unblocking and on-time delivery.}
     \resumeItemListEnd
   }}
 
+% ----- BUG BASE -----
 \resumeProjectHeading
-{\textbf{Bug Base} $|$ \footnotesize\emph {Remote, IND }$|${ Full Stack Development Intern } \vspace{1pt}}{January 2024 – January 2025}
+{\textbf{Bug Base} $|$ \footnotesize\emph{Remote, IND} $|$ \textbf{Full Stack Development Intern} \vspace{1pt}}{\textbf{January 2024 – January 2025}}
 {\small{\resumeItemListStart
-    \resumeItem{Pentest Copilot - external, internal \& phishing assessment for automated Pen-testing. PowerShell \& Bash modules for hash identification \& cracking, secrets extraction for windows/Linux/macOS. Active Directory exploits including ADCS, Zerologon, Kerberoasting, FTP, SMB, RDP etc. Integration of security tools including Responder, SharpHound, NetExec with multi- threading and customer parsers. Windows service execution via C++ remote code execution and reflective injection for agent deployment, bypassing Defender. Used tools like Ligolo-ng, Squid Proxy, Ngrok \& VPNs for testing on VMs. Cloud enumeration for AWS, GCP, and Azure, and integrated a TOR proxy for anonymity}
-    \resumeItem{Actively worked on client requested features and application enhancements. Middleware to enhance concurrent access and spam prevention, incorporating soft banning. Middleware for Pentest Copilot to establish persistent SSH \& VPN connections and timeout idle channels. Improved backend service efficiency by over 70\% by optimizing queries.}
+    \resumeItem{\textbf{Pentest Copilot:} Built an AI-driven agent for external, internal, and phishing assessments. Implemented \textbf{C++ reflective injection} for stealthy Windows agent deployment (bypassing Defender), developed PowerShell/Bash modules for hash identification \& cracking and secrets extraction across Win/Linux/macOS, and integrated AD exploits (\textit{ADCS, Zerologon, Kerberoasting, FTP, SMB, RDP}). Orchestrated covert testing via \textbf{Ligolo-ng, Squid Proxy, Ngrok, VPNs, and TOR} for anonymity, with cloud enumeration across AWS/GCP/Azure and integration of multi-threaded security tools (Responder, SharpHound, NetExec) with custom parsers.}
+
+    \resumeItem{\textbf{BugBase Website:} Enhanced a bug bounty platform (Next.js, Node.js, AWS) by delivering client-requested features and architectural improvements. Built middleware for concurrent access with \textbf{soft-banning and spam prevention}. Developed a separate middleware for the pentest sandbox to establish persistent \textbf{SSH \& VPN connections} with idle timeout enforcement. Optimized database queries and aggregation pipelines, slashing average API latency by \textbf{over 70\%} across \textbf{15+ high-traffic REST endpoints}.}
     \resumeItemListEnd
   }}
 
+% ----- PUBLICIS SAPIENT -----
 \resumeProjectHeading
-{\textbf{Publicis Sapient} $|$ \footnotesize\emph {Noida, IND }$|${ Engineering Intern} \vspace{1pt}}{May 2024 - July 2024}
-{\small{\resumeItemListStart
-    \resumeItem{Enhanced Spring Boot microservices for One Savings Bank (FINCRIME \& CIAM), developing Kafka services and monitoring streams via Conduktor.}
-    \resumeItemListEnd
-  }}
+{\textbf{Publicis Sapient} - \textbf{Summer Intern} \vspace{1pt} $|$ \textbf{May - July 2024} $|$ \small{Enhanced Spring Kafka streaming FINCRIME service for One Savings Bank}}{}
 
 \resumeSubHeadingListEnd
-% -------------------- PROJECTS --------------------
+
+
+% -------------------- PROJECTS (LEADERSHIP + RESEARCH) --------------------
 \section{Projects}
-
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{Technical Secretary - Student Council} $|$ MIT, Manipal \footnotesize\emph  {}{} \vspace{1pt}}{2023 - 2024}
+{\textbf{Technical Secretary - Student Council} $|$ MIT, Manipal}{2023 - 2024}
 {\small{\resumeItemListStart
-    \resumeItem{Automated high-friction manual processes in collaboration with administration, boosting efficiency and transparency.}
-    \resumeItem{Streamlined event entry for 9000 students by designing \& implementing a QR system, replacing cumbersome band collection. Eliminated multiple 3–4 hr queues and false entries increasing efficiency. Utilized local deployment with end of day DB migration and wireless LAN for rapid scanning.}
-    \resumeItem{Built a web app to digitize student club and project room allocation, replacing multi-signature paper approvals with an online workflow. Added concurrency controls to prevent race conditions and maintained a centralized availability database.}
+    \resumeItem{Led a team of 20+ members to automate high-friction manual processes for \textbf{9,000+ students}. Designed a QR-based entry system eliminating 3–4 hour queues, and built a concurrent room-allocation web app reducing approval time from 3 days to 2 hours.}
     \resumeItemListEnd
   }}
 
 \resumeProjectHeading
-{\textbf{Organizing Team – Developed Website, Manipal Hackathon 2023} $|$ MIT, Manipal \footnotesize\emph{} \vspace{1pt}}{2023}
+{\textbf{Organizing Team – Developed Website} $|$ Manipal Hackathon 2023}{2023}
 {\small{\resumeItemListStart
-    \resumeItem{Designed, developed and deployed the first student-built event management website deployed in college production, handling registrations, team formation, submissions, judging, and real-time analytics via user, admin, and judges portals.}
+    \resumeItem{Led development of the first student-built event management website deployed in college production, handling \textbf{500+ registrations}, team formation, submissions, judging, and real-time analytics via user/admin/judges portals.}
     \resumeItemListEnd
   }}
 
 \resumeProjectHeading
-{\textbf{Emotional Text-to-Speech System} $|$  Samsung PRISM $|$\footnotesize\emph  {\href{https://www.samsungprism.com/Profile/Document/323VI0432219.pdf}{Link}}\vspace{1pt}}{March 2023 - September 2023}
+{\textbf{Emotional Text-to-Speech System} $|$ Samsung PRISM $|$ \footnotesize\emph{\href{https://www.samsungprism.com/Profile/Document/323VI0432219.pdf}{Link}}}{March 2023 - Sept 2023}
 {\small{\resumeItemListStart
-    \resumeItem{TTS incorporating emotions using Tacotron 2 \& Wavesurfer.js application to correct word timestamp.}
+    \resumeItem{Developed a TTS system incorporating emotions using \textbf{Tacotron 2} and \textbf{Wavesurfer.js} for timestamp correction, demonstrating research capability in AI/ML and audio signal processing.}
     \resumeItemListEnd
   }}
 \resumeSubHeadingListEnd
 
-\section{Certifications \& Learnings}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
 \resumeSubHeadingListStart
-\resumeCertTwoColumns
-{\textbf{HashiCorp Certified: Terraform Associate} $|$ \footnotesize\emph{\href{https://www.credly.com/badges/8c767383-3f07-4103-881c-bd0f7b1eba3a/public_url}{Link}}}
-{}
-{\textbf{Amazon ML Summer School - 2024} $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1Pe39ukmHHIuC-mangq8pGkVITWgn6Cvx/view}{Link}}}
-{}
-\resumeCertTwoColumns
-{\textbf{GraphQL by Example - Udemy} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-cdd9b580-29d9-4e68-b7d1-4f1694867a20/}{Link}}}
-{}
-{\textbf{Spring Boot \& Spring Cloud - Google Cloud} $|$ \footnotesize\emph{\href{https://www.coursera.org/account/accomplishments/verify/657NX5XKKVLN}{Link}}}
-{}
+\resumeSubheading
+{Manipal Institute of Technology — Manipal}{\textbf{Rank 1 $|$} 2021 – July 2025}
+{B.Tech in Information Technology $|$ Minor: Big Data Analytics}{\textbf{(Achiever's Scholarship ×2)} CGPA: 9.43}
+\resumeSchoolHeading
+{Amity International School (CBSE)}{2021}
+{Class XII (PCM + CS): 93.6\%}{Class X: 92.8\%}
 \resumeSubHeadingListEnd
-\vspace{1pt}
-% \resumeCertTwoColumns
-% {\textbf{MERN (MongoDB, ExpressJS, ReactJs, NodeJs, Redux)} $|$ \footnotesize\emph{\href{https://www.udemy.com/certificate/UC-e4fa1193-cf9b-4629-9caf-00123002684f/}{Link}}}
 
 
+% -------------------- SKILLS --------------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.08in, label={}]
+  \small{\item{
+        \textbf{Languages \& Frameworks:} Java, Python (Quart \& Flask), C, C++, Spring Boot \& WebFlux, ReactJS, Redux, Node.js, Bash, PowerShell \\
+        \textbf{Data \& Technologies:} SQL, NoSQL, Neo4j, PySpark, Kafka, GraphQL, REST, WebSockets, Docker, Arduino, MCP, Agentic Systems \\
+        \textbf{Cloud \& Tools:} AWS (Glue, Lambda, ECS, EKS etc.), Terraform, Jenkins, Spinnaker, Git, Splunk, JUnit, Mockito, Cucumber, Gherkin
+        }}
+\end{itemize}
+\vspace{-9pt}
 
-\section{Competitions \& Hackathons}
+
+% -------------------- AWARDS & RECOGNITIONS --------------------
+\section{Awards \& Recognitions}
 \resumeSubHeadingListStart
 \resumeCertHeading
-{\textbf{JPMC - Weeklong Agile Hackathon $|$ Winner } $|$ Won by rapidly delivering high-priority features through effective work distribution and peer learning}
+{\textbf{JPMC Agile Hackathon} $|$ \textbf{Winner} $|$ Rapidly delivered high-priority features through effective work distribution \& peer learning.}
 \resumeCertHeading
-{\textbf{JPMC – Global Capture the Flag Event $|$ Winner } $|$ Captured most OWASP web vulnerabilities, achieving top global score.}
+{\textbf{JPMC Global Capture the Flag} $|$ \textbf{Winner} $|$ Captured most OWASP web vulnerabilities, achieving top global score.}
 \resumeCertHeading
-{\textbf{Adobe Gensolve 2024 $|$ Top 5\%ile } $|$ \footnotesize\emph{\href{https://drive.google.com/file/d/1pWoLmEphNQBDTTapcTiruJGMoiKKBAM_/view?usp=sharing}{Link}} $|$ React \& Flask based doodling platform for polyline transformation, symmetry detection, and regularization using OpenCV. }
-
+{\textbf{Adobe Gensolve 2024} $|$ \textbf{Top 5\%ile} $|$ \href{https://drive.google.com/file/d/1pWoLmEphNQBDTTapcTiruJGMoiKKBAM_/view?usp=sharing}{Link} $|$ React \& Flask doodling for polyline transformation \& symmetry detection using OpenCV.}
 \resumeCertHeading
-{\textbf{DEVSPRINT @ ISTE Aurora 2024 $|$ Runner-Up } | \emph{OCR-LLM based app automating medicine filling from prescriptions, improving care-taker efficiency. }}
-
-\resumeCertHeading
-{\textbf{Commonwealth Virtual Exchange – ACU $|$ People's Choice Award} $|$ \emph{Collaborated with peers internationally, fostering cross-disciplinary teamwork}}
-
-\resumeCertHeading
-{\textbf{JPMC Code for Good 2024 $|$} \emph{Addressed EXPA’s travel management issues via geolocation-based trainer ranking, implemented assessment feedback loops, automated certification pipelines, and improved engagement via SMS/call reminders.}}
+{\textbf{DEVSPRINT @ ISTE Aurora 2024} $|$ \textbf{Runner-Up} $|$ OCR-LLM based app automating medicine filling from prescriptions.}
 \resumeSubHeadingListEnd
+
+
+% -------------------- CERTIFICATIONS (FIXED: NO WRAPPING) --------------------
+\section{Certifications}
+\resumeSubHeadingListStart
+\resumeCertThreeColumns
+{\textbf{HashiCorp Terraform Associate} | \href{https://www.credly.com/badges/8c767383-3f07-4103-881c-bd0f7b1eba3a/public_url}{Link}}
+{\textbf{Amazon ML Summer School} | \href{https://drive.google.com/file/d/1Pe39ukmHHIuC-mangq8pGkVITWgn6Cvx/view}{Link}}
+{\textbf{WorldQuant University – FFE} | \href{https://www.credly.com/badges/f7aadcde-f2dc-4137-8958-e93a1c89415f}{Credential}}
+\resumeSubHeadingListEnd
+
 \end{document}
